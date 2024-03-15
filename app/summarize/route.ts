@@ -5,7 +5,7 @@ import { resolve } from "path";
 export async function POST(request: Request) {
     const { textToSummary } = await request.json();
     console.log(textToSummary)
-   const open_ai_key = process.env.open_ai_key
+   const open_ai_key = ""
     //console.log(suggest)
     // Corrected the URL and removed unnecessary quotes
     const options = {
