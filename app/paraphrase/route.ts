@@ -7,7 +7,7 @@ export async function POST(request: Request) {
     const { textToParaphrase } = await request.json();
     //console.log(request)
     
-   // const open_ai_key = ""
+
     //console.log(suggest)
     // Corrected the URL and removed unnecessary quotes
     const options = {
