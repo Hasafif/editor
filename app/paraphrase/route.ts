@@ -20,10 +20,10 @@ export async function POST(request: Request) {
                 {'role': 'user', 'content': `Rephrase the following paragraph:\n${textToParaphrase}`}
             ]
         },
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${}`
-        },
+        //headers: {
+        //    'Content-Type': 'application/json',
+          //  'Authorization': `Bearer ${}`
+       // },
     };
 
     try {
