@@ -6,8 +6,8 @@ import { resolve } from "path";
 export async function POST(request: Request) {
     const { textToParaphrase } = await request.json();
     //console.log(request)
-    
-
+    //const open_ai_key = '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'; // Ensure this key is securely managed
+    const open_ai_key = process.env.open_ai_key
     //console.log(suggest)
     // Corrected the URL and removed unnecessary quotes
     const options = {
@@ -20,10 +20,10 @@ export async function POST(request: Request) {
                 {'role': 'user', 'content': `Rephrase the following paragraph:\n${textToParaphrase}`}
             ]
         },
-        //headers: {
-        //    'Content-Type': 'application/json',
-          //  'Authorization': `Bearer ${}`
-       // },
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${open_ai_key}`
+        },
     };
 
     try {
